@@ -1,0 +1,246 @@
+les maps sont des liste de clé-valeur :
+var personne = {
+    "nom":"john",
+    "age":25
+    "actif":true
+}
+
+//affichage 
+print(personne);
+print(personne["nom"]);
+pour voir si ce map contient un clé
+print(personne.containsKey("nom")); //true
+print(personne.containsValue(25));//true
+
+//modifier 
+personne.update("actif" , (value)=>false)
+print(personne)
+
+Map<String, int> try = {
+   "try1":1
+   "try2":2
+}
+
+on peut avoir 
+Map<String, Object>
+Map<Object, Object> ect ..
+
+
+-----------List Map -----
+var messages = [
+{
+    "nom":"john",
+    "age":25
+    "actif":true
+},
+{
+    "nom":"john",
+    "age":24
+    "actif":false
+}
+
+]
+
+print(messages[0]);
+print(messages[0]["user"]);
+list<Map<String, Object>> messages 
+
+
+list<Map<String, Object>> articles=[];
+
+articles.add({
+"auteur": "jean",
+"adresse": "fass"
+})
+
+
+-------------boucles-------
+int t=0
+
+___while
+
+while(t<10){
+print("affiche 10");
+t=t+1; 
+}
+
+
+____for
+for(int i=0; i<10 ; i++)
+{
+print('ok')
+}
+ 
+
+List<String> fruits = ["banane","pomme","ananas"]
+for(String fruit in fruits){
+print(fruit);
+}
+
+___do while
+int j=0;
+do{
+  print("hello")
+  j = j+1
+}while(j<10)
+
+
+------------fonctions-----
+void main(){
+direBonjour(aliou)
+print(somme2(4,3)
+}
+void direBonjour(String nom){
+ print("bonjour $nom")
+}
+
+int somme2(int a, int b) => a+b; (c'est une fonction)
+
+
+les fonctions qui ne possedent pas de noms sont appelé
+fonction anonyme.
+void main(){
+List<int> liste = [1,2,3,4,5];
+void action(int nombre){
+print(nombre)
+}
+liste.foreach(action) // LA methode foreach prends en parametre
+une fonction
+
+}
+
+ou bien donner directement la fonction anonyme
+liste.foreach((int nombre){
+    print(nombre);
+});
+
+
+--------------------- POO ---------------
+une classe est un modèle qui definit les propriétés et les
+comportements(methodes) commun à un ensemble d'objets.
+
+CONSTRUCTEUR : methode qui a le meme nom que la classe 
+ qui est appele lors de la 
+creation d'une nouvelle objet ,
+
+un objet est une instace de la classe(l'objet possede
+des propriétes et des comportements definis de la classe )
+
+methode c'est une fontion a l'interieur de la classe
+
+getters et setters sont des methodes speciaux qui 
+nous permettent de lire ou d'ecrire les propriété
+ du methode 
+
+l'heritage permet a une classe de deriver de toute 
+fonctionnalité d'une autre classe 
+la classe derivee herite de tous les propriétes
+et les methodes de la classe parent
+les constructeurs ne s'herite pas 
+
+
+void main(){
+//objet
+je cree un objet de type User , le nom user1
+User user1 = User("john",25,true)
+print(user1.name)
+print(user1.profile())
+print(user1.actif) //true
+user1.changeStatus = true;
+
+Admin admin2 = Admin("gae",50,true)
+print(admin2.profile())
+}
+
+Class Admin extends User{
+Admin(String name, int age, bool status) : super(name,age,staus) 
+
+//pour utiliser mon propre profil j'ajoute @override
+@override
+profile(){
+return "profile de l'admin $name" 
+}
+}
+
+Class User{
+//proprietes 
+String name;
+int age;
+bool status;
+
+//constructeur 
+User(this.name,this.age,this.status);
+
+
+//methode
+String profile(){
+return "profil de ${name}";
+}
+
+//getters et setters
+//les getters nous permet d'acceder à l'informartion
+String get actif {
+ if(status){
+return "Oui";
+} 
+return "NON";
+}
+
+ou bien String get actif => status? "oui" : "non";
+set changeStatus(bool valeur)=> status = valeur ;
+
+}
+
+
+-------Null safety----
+pour dire a daart que ma variable peut contenir une 
+valeure null on mets un ?
+int? a;
+a = null;
+print("a = $a");
+ 
+
+List<int?> liste = [1,2,null,4,5];//pour indiquer qu'un
+element de la liste peut etre null 
+List<int>? liste2; //pour indiquer que la liste 
+peut etre null 
+ 
+List<int?> liste = [1,2,null,4,5];
+String premier = liste.first!;//si on mets pas ! y'a erreur parce
+qu'il nous dis que un string ne peut pas etre null
+
+---
+List<int?> liste2;
+print(liste?.length);//null (si on mets pas? ca mets erreurs 
+pour nous dire que length ne peut pas etre utiliser dans une 
+liste null 
+ou bien on peut faire 
+print(liste2 ?? "la liste est vide");// au lieu de null la liste est vide
+print(liste?.length ?? "pas possibble"); ==
+print(liste != null ? liste2 : "pas possibble"); 
+
+
+pour les variables qui n'ont pas encore de valeur, comme les variables 
+provenant d'une base de donnees ou autre on peut utiliser late
+late String message;
+
+-----------exceptions 
+evenement non prevus qui peut se produire pendant l'execution 
+d'un programmen, elle peut etre causée par une erreur de programmatin
+par une entrée incorrecte de l'utilisateur ou par des conditions
+externes 
+
+dynamic x= "ok";
+x=x+1;
+print("Continue");
+coté syntaxe pas d'erreur dynamic peut etre de tout type
+mais si on execute le programme y'a erreur 
+try{
+ dynamic x = "ok";
+ x = x + 1;
+}catch (e){
+print("erreur");
+}
+print("Continue");
+
+le programme ne vas pas s'arreter,

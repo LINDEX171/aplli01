@@ -1,0 +1,3 @@
+google idx (creer notre projet en ligne)
+flutter creare appli01
+pubspeck.yaml (nom app , version , sdk , dependence ect...)
