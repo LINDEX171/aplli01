@@ -1,0 +1,4 @@
+un widget est une partie qui definit une partie de l'interface
+utilisateur.
+stateless ne change pas avec le temps(statique)
+statefull qui change avec le temps(dynamique)
