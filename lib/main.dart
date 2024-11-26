@@ -12,20 +12,26 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: const HomePage(),
+      home:  HomePage(),
     );
   }
 }
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
-
+   HomePage({super.key});
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
   int counter = 0;
+
+  final List images = [
+    "https://cdn.homedit.com/wp-content/uploads/tallest-building-nyc/Chrysler-Building.jpg",
+    "https://assets-news.housing.com/news/wp-content/uploads/2022/10/12093520/Types-of-building-materials.jpg",
+    "https://cdn.homedit.com/wp-content/uploads/tallest-building-nyc/Chrysler-Building.jpg",
+    "https://assets-news.housing.com/news/wp-content/uploads/2022/10/12093520/Types-of-building-materials.jpg",
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,16 +69,13 @@ class _HomePageState extends State<HomePage> {
       //     Icon(Icons.thumb_down),
       //   ],
       // ),
-      body: ListView(
-         scrollDirection: Axis.horizontal,
-        children: [
-          Image.network("https://cdn.homedit.com/wp-content/uploads/tallest-building-nyc/Chrysler-Building.jpg", height: 200 , width: 200,),
-          Image.network("https://assets-news.housing.com/news/wp-content/uploads/2022/10/12093520/Types-of-building-materials.jpg", height: 200 , width: 200,),
-          Image.network("https://assets-news.housing.com/news/wp-content/uploads/2022/10/12093520/Types-of-building-materials.jpg"),
-          Image.network("https://cdn.homedit.com/wp-content/uploads/tallest-building-nyc/Chrysler-Building.jpg", height: 200 , width: 200,),
-          Image.network("https://assets-news.housing.com/news/wp-content/uploads/2022/10/12093520/Types-of-building-materials.jpg", height: 200 , width: 200,),
-          Image.network("https://assets-news.housing.com/news/wp-content/uploads/2022/10/12093520/Types-of-building-materials.jpg")
-        ],),
+      body: ListView.builder(
+        itemCount: images.length,
+        itemBuilder: (context, index) {
+         return Container(margin: EdgeInsets.all(10), child: Image.network(images[index], height: 200 , width: 200,));
+        },
+        scrollDirection: Axis.horizontal,
+       ),
       floatingActionButton: FloatingActionButton(
 
         onPressed: () {
