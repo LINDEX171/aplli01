@@ -1,0 +1,17 @@
+c'est un widget qui vas prendre une liste de widget
+enfants et les organiser en enfant
+
+body: Column(
+        children: [
+          Text("text1"),
+          Text("Text2"),
+          Image.network("https://thumbs.dreamstime.com/z/wan-wide-area-network-technology-connects-your-offices-data-centers-cloud-applications-storage-together-271663816.jpg")
+        ],
+      ),
+
+le mainaxisalignment c'est pour aligne la liste
+de notre column (en haut , en, bas ou au milieu,
+space entre les enfants  ect ...)
+
+mainAxisAlignment: MainAxisAlignment.center,
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,ECT..
