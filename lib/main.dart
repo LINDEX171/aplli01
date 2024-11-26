@@ -54,15 +54,25 @@ class _HomePageState extends State<HomePage> {
       //     Image.network("https://thumbs.dreamstime.com/z/wan-wide-area-network-technology-connects-your-offices-data-centers-cloud-applications-storage-together-271663816.jpg", height: 200 , width: 200,)
       //   ],
       // ),
-      body: Row(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      // body: Row(
+      //   crossAxisAlignment: CrossAxisAlignment.end,
+      //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //   children: [
+      //     Icon(Icons.thumb_up),
+      //     Image.network("https://thumbs.dreamstime.com/z/wan-wide-area-network-technology-connects-your-offices-data-centers-cloud-applications-storage-together-271663816.jpg", height: 200 , width: 200,),
+      //     Icon(Icons.thumb_down),
+      //   ],
+      // ),
+      body: ListView(
+         scrollDirection: Axis.horizontal,
         children: [
-          Icon(Icons.thumb_up),
-          Image.network("https://thumbs.dreamstime.com/z/wan-wide-area-network-technology-connects-your-offices-data-centers-cloud-applications-storage-together-271663816.jpg", height: 200 , width: 200,),
-          Icon(Icons.thumb_down),
-        ],
-      ),
+          Image.network("https://cdn.homedit.com/wp-content/uploads/tallest-building-nyc/Chrysler-Building.jpg", height: 200 , width: 200,),
+          Image.network("https://assets-news.housing.com/news/wp-content/uploads/2022/10/12093520/Types-of-building-materials.jpg", height: 200 , width: 200,),
+          Image.network("https://assets-news.housing.com/news/wp-content/uploads/2022/10/12093520/Types-of-building-materials.jpg"),
+          Image.network("https://cdn.homedit.com/wp-content/uploads/tallest-building-nyc/Chrysler-Building.jpg", height: 200 , width: 200,),
+          Image.network("https://assets-news.housing.com/news/wp-content/uploads/2022/10/12093520/Types-of-building-materials.jpg", height: 200 , width: 200,),
+          Image.network("https://assets-news.housing.com/news/wp-content/uploads/2022/10/12093520/Types-of-building-materials.jpg")
+        ],),
       floatingActionButton: FloatingActionButton(
 
         onPressed: () {
