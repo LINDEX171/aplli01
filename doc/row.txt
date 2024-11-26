@@ -1,0 +1,6 @@
+les rows permettent de prendre une liste de widgetet les
+alignés horizontalement
+
+
+mainaxisalignment(a gauche droite ou milieu )
+crossaxisalignment(affichage vertical )

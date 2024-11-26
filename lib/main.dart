@@ -45,13 +45,22 @@ class _HomePageState extends State<HomePage> {
       //     ),
       //     alignment: Alignment.topLeft,
       //     child: Text("hi $counter")),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
+      // body: Column(
+      //   crossAxisAlignment: CrossAxisAlignment.start,
+      //   mainAxisAlignment: MainAxisAlignment.center,
+      //   children: [
+      //     Text("text1"),
+      //     Text("Text2"),
+      //     Image.network("https://thumbs.dreamstime.com/z/wan-wide-area-network-technology-connects-your-offices-data-centers-cloud-applications-storage-together-271663816.jpg", height: 200 , width: 200,)
+      //   ],
+      // ),
+      body: Row(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text("text1"),
-          Text("Text2"),
-          Image.network("https://thumbs.dreamstime.com/z/wan-wide-area-network-technology-connects-your-offices-data-centers-cloud-applications-storage-together-271663816.jpg", height: 200 , width: 200,)
+          Icon(Icons.thumb_up),
+          Image.network("https://thumbs.dreamstime.com/z/wan-wide-area-network-technology-connects-your-offices-data-centers-cloud-applications-storage-together-271663816.jpg", height: 200 , width: 200,),
+          Icon(Icons.thumb_down),
         ],
       ),
       floatingActionButton: FloatingActionButton(
