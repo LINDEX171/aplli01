@@ -29,8 +29,19 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return   Scaffold(
-      appBar: AppBar(title: Text("appli1"), elevation: 12,),
-      body: Center(child: Text("hi $counter")),
+      appBar: AppBar(title: Center(child: Text("appli1")), elevation: 12,),
+      body: Container(
+       // color: Colors.orange,
+        padding: EdgeInsets.all(20),
+         margin: EdgeInsets.all(20),
+          height: 200,
+          width: 400,
+          decoration: BoxDecoration(
+            color: Colors.orange,
+            borderRadius: BorderRadius.circular(20)
+          ),
+          alignment: Alignment.topLeft,
+          child: Text("hi $counter")),
       floatingActionButton: FloatingActionButton(
         onPressed: (){
           setState(() {

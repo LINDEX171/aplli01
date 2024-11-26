@@ -2,3 +2,8 @@ un widget est une partie qui definit une partie de l'interface
 utilisateur.
 stateless ne change pas avec le temps(statique)
 statefull qui change avec le temps(dynamique)
+
+
+padding est different de margin ,
+padding c'est l'espace à l'interieur ,
+margin c'est l'espace a l'exterieur ,

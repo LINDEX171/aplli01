@@ -1,0 +1,4 @@
+un container vous permet de creer un element
+visuel rectangulaire.
+un container peut etre decore avec une couleur ,
+une bordure , ou une ombre etc..
