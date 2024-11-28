@@ -31,15 +31,27 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+     floatingActionButton: FloatingActionButton(onPressed: () {
+       
+     },child: Icon(Icons.confirmation_num_sharp),elevation: 0,backgroundColor: Colors.blue,foregroundColor: Colors.white,),
       body: ListView(children: [
         Center(
           child: ElevatedButton(
-            style: ElevatedButton.styleFrom(backgroundColor: Colors.black,minimumSize: Size(50, 50)),
+
+            style: ElevatedButton.styleFrom( backgroundColor: Colors.black,minimumSize: Size(50, 50)),
               onPressed: () {
 
-          }, child: Text("elevation button")),
-        )
-      ],),
+          }, child: Text("elevation button"),),
+        ),
+        OutlinedButton(
+            onPressed: () {
+
+        }, child: Text("outlined bouton"),),
+        IconButton(onPressed: () {
+          
+        }, icon: Icon(Icons.home))
+      ],
+      ),
     );
   }
 }
