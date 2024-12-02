@@ -30,43 +30,54 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            DrawerHeader(
-              child: Image.network(
-                "https://th.bing.com/th/id/OIP.9SmZ8rqMhIoMSnZ5_zK3LgHaFj?rs=1&pid=ImgDetMain",
+      drawer: Drawer(child:  ListView(
+        children: [
+           Padding(
+             padding: const EdgeInsets.all(20.0),
+             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+              CircleAvatar(backgroundImage: NetworkImage("https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png"),maxRadius: 50,),
+              SizedBox(height: 15,),
+              Text("Ibrahima Dieng",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                SizedBox(height: 15,),
+                Text("web mobile developer | php-laravel-"
+               "dart-flutter-python-django-bootstrap"),
+                SizedBox(height: 15,),
+                Text("Dakar, Région de Dakar,Sénégal"),
+                SizedBox(height: 15,),
+              Container(
+                color: Colors.grey,
+                child: ListTile(onTap: () {
+
+                },title: Text("Experience"),leading: Icon(Icons.add),),
+
               ),
-            ),
-            ListTile(
-              title: Text("parametre"),
-              leading: Icon(Icons.settings,),
-              subtitle: Text("page parameter"),
-              trailing: Icon(Icons.add),
-              onTap: () {
+                SizedBox(height: 10,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text("32", style: TextStyle(color: Colors.blue,fontSize: 20,fontWeight: FontWeight.bold),),
+                    SizedBox(width: 10,),
+                    Text("vues du profil",style: TextStyle(fontSize: 20,color: Colors.grey),),
 
-              },
-            ),
-            ListTile(
-              title: Text("profile"),
-              leading: Icon(Icons.person,),
-              subtitle: Text("page profile"),
+                  ],
+                ),
+                SizedBox(height: 10,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text("34", style: TextStyle(color: Colors.blue,fontSize: 20,fontWeight: FontWeight.bold),),
+                    SizedBox(width: 10,),
+                    Text("impressions du post",style: TextStyle(fontSize: 20,color: Colors.grey),),
 
-            ),
-            ListTile(
-              title: Text("help"),
-              leading: Icon(Icons.help,),
-              subtitle: Text("page help"),
-            ),
-            ListTile(
-              title: Text("quittez"),
-              leading: Icon(Icons.cancel,),
-              subtitle: Text("page cancel"),
-            ),
-
-          ],
-        ),
-      ),
+                  ],
+                )
+                       ],),
+           )
+        ],
+      ),),
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         // leading: Icon(Icons.menu),
@@ -84,3 +95,26 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
