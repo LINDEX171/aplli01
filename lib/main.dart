@@ -30,7 +30,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(child:  ListView(
+      drawer: Drawer(
+        backgroundColor: Colors.white,
+        child:  ListView(
         children: [
            Padding(
              padding: const EdgeInsets.all(20.0),
@@ -54,7 +56,9 @@ class _HomePageState extends State<HomePage> {
                 },title: Text("Experience"),leading: Icon(Icons.add),),
 
               ),
-                SizedBox(height: 10,),
+                SizedBox(height: 20,),
+                Divider(thickness: 1,color: Colors.grey,),
+                 SizedBox(height: 30,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -73,7 +77,43 @@ class _HomePageState extends State<HomePage> {
                     Text("impressions du post",style: TextStyle(fontSize: 20,color: Colors.grey),),
 
                   ],
+                ),
+                SizedBox(height: 20,),
+                Divider(thickness: 1,color: Colors.grey,),
+                SizedBox(height: 30,),
+                Text("Post enregistrés",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
+                SizedBox(height: 30,),
+                Text("Groupes",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
+                SizedBox(height: 30,),
+                Row(
+                  children: [
+                    Text("Jeux",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
+                    SizedBox(width: 10,),
+                    Text("NOUVEAU",style: TextStyle(backgroundColor: Colors.amberAccent,),)
+
+                  ],
+                ),
+                SizedBox(height: 40,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Icon(Icons.workspace_premium),
+                    SizedBox(width: 10,),
+                    Text("Essai Premium pour 0 CFA",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),)
+                  ],
+                ),
+                SizedBox(height: 40,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Icon(Icons.settings),
+                    SizedBox(width: 10,),
+                    Text("Préférences",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),)
+                  ],
                 )
+                // ListTile(leading: Icon(Icons.workspace_premium),title: Text("Essai Premium pour 0 cfa",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),)
                        ],),
            )
         ],
