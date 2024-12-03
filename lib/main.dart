@@ -1,5 +1,6 @@
 import 'package:appli01/pages/drawer_page.dart';
 import 'package:appli01/pages/home_page.dart';
+import 'package:appli01/pages/settings_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,27 +17,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(colorSchemeSeed: Colors.blue),
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      initialRoute: "/",
+      routes: {
+        "/": (context) => MyHomePage(),
+        "/settings": (context) => MySettingsPage(),
+      },
     );
   }
 }
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: MyHomePage(),
-    );
-  }
-}
 
 
 

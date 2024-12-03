@@ -33,9 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: ElevatedButton(
           child: Text("navigate to the seetings page"),
           onPressed: () {
-         Navigator.push(context, MaterialPageRoute(builder: (context) {
-           return MySettingsPage();
-         },),);
+         Navigator.pushNamed(context, "/settings");
         },),
       ),
     );
