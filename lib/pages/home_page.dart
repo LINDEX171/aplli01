@@ -10,6 +10,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+   String email = "";
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -29,12 +31,35 @@ class _MyHomePageState extends State<MyHomePage> {
         elevation: 14,
       ),
       backgroundColor: Colors.white,
-      body: Center(
-        child: ElevatedButton(
-          child: Text("navigate to the seetings page"),
-          onPressed: () {
-         Navigator.pushNamed(context, "/settings");
-        },),
+      body: ListView(
+        children:[
+          Padding(
+            padding: const EdgeInsets.all(40.0),
+            child: TextField(
+              decoration: InputDecoration(
+                  labelText: "Email",
+                  hintText: "enter your mail",
+                  prefixIcon: Icon(Icons.email),
+                  helperText: "votre label doit contenir @",
+                  //true the inputtext will be filled , false no
+                  filled: false,
+                fillColor: Colors.blueAccent,
+                //if false don't allow the user to write in the textfield
+               // enabled: true,
+                border: OutlineInputBorder(borderSide: BorderSide(width: 10,),
+                )
+              ),
+              //permet de recuperer ce que l'utilisateur a saisi
+              onChanged: (value) {
+                setState(() {
+                  email = value;
+                });
+              },
+              
+            ),
+          ),
+          Text(email)
+        ]
       ),
     );
   }
